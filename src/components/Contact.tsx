@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { SOCIALS } from '@/lib/data';
 import { Mail, Linkedin, Github, Instagram, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,6 +10,12 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 
 export function Contact() {
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
   const socialItems = [
     { name: 'GitHub', icon: <Github />, link: SOCIALS.github },
     { name: 'LinkedIn', icon: <Linkedin />, link: SOCIALS.linkedin },
@@ -123,7 +129,7 @@ export function Contact() {
         </motion.div>
 
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center text-muted-foreground text-sm gap-4">
-          <p>© {new Date().getFullYear()} Savita Teggi. Built with Passion & Code.</p>
+          <p>© {currentYear ?? '2026'} Savita Teggi. Built with Passion & Code.</p>
           <div className="flex gap-6">
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#projects" className="hover:text-primary transition-colors">Projects</a>

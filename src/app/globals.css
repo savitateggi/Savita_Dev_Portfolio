@@ -34,34 +34,36 @@
   body {
     @apply bg-background text-foreground font-body antialiased selection:bg-primary/20 selection:text-primary;
     background-image: 
-      radial-gradient(circle at 0% 0%, rgba(124, 58, 237, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 100% 100%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.01) 0%, transparent 50%);
+      radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 50% 10%, rgba(124, 58, 237, 0.04) 0%, transparent 60%),
+      radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 30%);
+    background-attachment: fixed;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline tracking-tight;
   }
 }
 
-/* Glassmorphism 2.0 Utilities - Dark Mode Optimized */
+/* Glassmorphism 2.0 Utilities */
 .glass-panel {
-  @apply bg-black/60 backdrop-blur-[32px] border border-white/[0.08] shadow-[0_20px_50px_rgba(0,0,0,0.5)];
+  @apply bg-black/40 backdrop-blur-[32px] border border-white/[0.1] shadow-[0_20px_50px_rgba(0,0,0,0.5)];
 }
 
 .glass-card {
-  @apply bg-white/[0.02] backdrop-blur-[24px] border border-white/[0.05] shadow-[0_8px_32px_0_rgba(0,0,0,0.4)];
+  @apply bg-white/[0.03] backdrop-blur-[24px] border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.4)];
 }
 
 .glass-card-hover {
-  @apply transition-all duration-500 hover:bg-white/[0.05] hover:border-primary/40 hover:shadow-[0_20px_50px_rgba(124,58,237,0.1)];
+  @apply transition-all duration-500 hover:bg-white/[0.06] hover:border-white/20 hover:shadow-[0_20px_50px_rgba(255,255,255,0.05)];
 }
 
 .glass-button {
-  @apply bg-white/[0.03] backdrop-blur-md border border-white/[0.08] hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300;
+  @apply bg-white/[0.05] backdrop-blur-md border border-white/[0.1] hover:bg-white/[0.1] hover:border-white/30 transition-all duration-300;
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#6366f1] to-primary bg-[length:200%_auto] animate-gradient;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-primary/80 to-white bg-[length:200%_auto] animate-gradient;
 }
 
 .nav-island {
@@ -69,7 +71,7 @@
 }
 
 .nav-island.scrolled {
-  @apply top-4 w-[95%] h-14 bg-black/90 border-primary/20 shadow-2xl;
+  @apply top-4 w-[95%] h-14 bg-black/80 border-white/20 shadow-2xl;
 }
 
 @keyframes gradient {
@@ -101,5 +103,5 @@
   @apply bg-background;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-white/5 rounded-full hover:bg-primary/50 transition-colors;
+  @apply bg-white/10 rounded-full hover:bg-primary/50 transition-colors;
 }
