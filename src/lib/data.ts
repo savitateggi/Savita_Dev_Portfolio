@@ -127,11 +127,11 @@ export const TIMELINE = [
   },
   {
     type: 'education',
-    title: 'B.E. in Electronics & Communication',
+    title: 'Bachelor of Engineering in ECE',
     organization: 'AMC Engineering College',
     period: '2021 - 2025',
-    description: 'Where hardware meets software. My ECE background gives me a deep understanding of how code interacts with the physical world.',
-    achievements: ['Hackathon Finalist', 'CGPA 8.5+']
+    description: 'Specializing in Electronics & Communication. Bridging the gap between hardware architecture and high-level software engineering.',
+    achievements: ['Quantum Hacks 2025 Finalist', 'Academic Excellence (8.5+ CGPA)']
   },
   {
     type: 'education',

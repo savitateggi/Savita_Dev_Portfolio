@@ -13,7 +13,7 @@ export function ExperienceTimeline() {
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       
       <div className="max-w-5xl mx-auto">
-        {/* Header Section matching reference image */}
+        {/* Header Section */}
         <div className="text-center mb-24 space-y-6">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -32,7 +32,7 @@ export function ExperienceTimeline() {
             transition={{ delay: 0.1 }}
             className="text-6xl md:text-8xl font-black tracking-tighter"
           >
-            Professional <span className="text-primary">Saga.</span>
+            Professional <span className="text-primary">Journey.</span>
           </motion.h2>
           
           <motion.p 
