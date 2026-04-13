@@ -4,6 +4,7 @@ import React from 'react';
 import { SKILLS } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Code, Server, Database, Layers, Wrench, User } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export function Skills() {
   const getIcon = (category: string) => {
@@ -21,14 +22,26 @@ export function Skills() {
   return (
     <section id="skills" className="py-24 px-6 bg-white/[0.02]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold mb-4 tracking-tight">Technical Arsenal</h2>
           <p className="text-muted-foreground text-lg">Categorized tools and technologies I've mastered.</p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {SKILLS.map((skillGroup, idx) => (
-            <div key={idx} className="glass-card p-6 rounded-2xl group hover:shadow-[0_8px_30px_rgba(161,187,255,0.05)] transition-all">
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="glass-card p-6 rounded-2xl group hover:shadow-[0_8px_30px_rgba(161,187,255,0.05)] transition-all"
+            >
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2.5 rounded-xl bg-primary/20 border border-primary/20">
                   {getIcon(skillGroup.category)}
@@ -46,7 +59,7 @@ export function Skills() {
                   </Badge>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
