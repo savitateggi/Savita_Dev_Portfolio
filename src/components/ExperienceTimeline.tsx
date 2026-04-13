@@ -8,11 +8,12 @@ import { motion } from 'framer-motion';
 
 export function ExperienceTimeline() {
   return (
-    <section id="timeline" className="py-32 px-6 relative bg-[#050505]">
-      {/* Background divider line */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+    <section id="timeline" className="py-32 px-6 relative bg-[#050505] overflow-hidden">
+      {/* Background divider line and glows */}
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-white/[0.02] rounded-full blur-[120px] -z-10" />
       
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto relative">
         {/* Header Section */}
         <div className="text-center mb-24 space-y-6">
           <motion.div
@@ -20,7 +21,7 @@ export function ExperienceTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Badge className="bg-primary/10 text-primary border-primary/30 px-6 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-[0.2em]">
+            <Badge className="bg-white/5 text-white border-white/20 px-6 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-[0.2em]">
               Milestones
             </Badge>
           </motion.div>
@@ -58,14 +59,14 @@ export function ExperienceTimeline() {
               className="relative"
             >
               {/* Timeline Indicator */}
-              <div className="absolute -left-[41px] md:-left-[73px] top-0 w-10 h-10 glass-panel rounded-full z-10 flex items-center justify-center border-white/10 bg-background">
+              <div className="absolute -left-[41px] md:-left-[73px] top-0 w-10 h-10 glass-panel rounded-full z-10 flex items-center justify-center border-white/20 bg-background shadow-[0_0_15px_rgba(255,255,255,0.1)]">
                 {item.type === 'experience' ? 
                   <Briefcase size={16} className="text-primary" /> : 
                   <GraduationCap size={18} className="text-accent" />
                 }
               </div>
               
-              <div className="glass-card p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border-white/5 hover:border-primary/20 transition-all duration-500 group">
+              <div className="glass-card p-8 md:p-12 rounded-[2.5rem] bg-white/[0.01] border-white/5 hover:border-white/20 transition-all duration-500 group">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-8">
                   <div>
                     <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-primary transition-colors mb-2">
@@ -80,7 +81,7 @@ export function ExperienceTimeline() {
                       )}
                     </div>
                   </div>
-                  <div className="shrink-0 bg-white/5 px-5 py-2 rounded-xl border border-white/5 font-black text-[10px] uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                  <div className="shrink-0 bg-white/5 px-5 py-2 rounded-xl border border-white/10 font-black text-[10px] uppercase tracking-widest text-muted-foreground flex items-center gap-2">
                     <Calendar size={12} />
                     {item.period}
                   </div>
@@ -106,7 +107,7 @@ export function ExperienceTimeline() {
                 {item.achievements && (
                   <div className="mt-8 flex flex-wrap gap-2">
                     {item.achievements.map((achievement, i) => (
-                      <Badge key={i} variant="outline" className="bg-primary/5 text-primary border-primary/20 px-4 py-1 text-[9px] uppercase font-black tracking-widest">
+                      <Badge key={i} variant="outline" className="bg-white/5 text-white border-white/10 px-4 py-1 text-[9px] uppercase font-black tracking-widest">
                         {achievement}
                       </Badge>
                     ))}

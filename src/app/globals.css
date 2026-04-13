@@ -78,6 +78,17 @@
   animation: gradient 6s ease infinite;
 }
 
+/* 3D Floating Animation */
+@keyframes float-3d {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  33% { transform: translate3d(30px, -50px, 100px) rotate(10deg); }
+  66% { transform: translate3d(-20px, 20px, -50px) rotate(-5deg); }
+}
+
+.animate-float-3d {
+  animation: float-3d 20s ease-in-out infinite;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

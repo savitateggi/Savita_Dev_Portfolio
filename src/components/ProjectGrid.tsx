@@ -10,12 +10,14 @@ import { motion } from 'framer-motion';
 export function ProjectGrid() {
   return (
     <section id="projects" className="py-32 px-6 relative overflow-hidden">
-      <div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+      {/* Dynamic Background Glows */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/[0.02] blur-[160px] -z-10" />
+      <div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div className="space-y-4">
-            <Badge variant="outline" className="border-primary/30 text-primary px-4 py-1 uppercase tracking-widest text-[10px] font-bold bg-primary/5">
+            <Badge variant="outline" className="border-white/20 text-white px-4 py-1 uppercase tracking-widest text-[10px] font-bold bg-white/5">
               Case Studies
             </Badge>
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-none">
@@ -29,7 +31,7 @@ export function ProjectGrid() {
             whileHover={{ scale: 1.05 }}
             href="https://github.com/savitateggi" 
             target="_blank" 
-            className="glass-button h-16 px-10 rounded-full flex items-center gap-3 font-bold text-sm uppercase tracking-widest shadow-xl shadow-black/20"
+            className="glass-button h-16 px-10 rounded-full flex items-center gap-3 font-bold text-sm uppercase tracking-widest shadow-xl shadow-black/20 border-white/20"
           >
             <Github size={18} />
             Entire Repository
@@ -49,7 +51,7 @@ export function ProjectGrid() {
               <a 
                 href={project.githubLink || `https://github.com/savitateggi`} 
                 target="_blank" 
-                className="relative block h-full glass-card rounded-[2.5rem] overflow-hidden group-hover:border-primary/40 group-hover:-translate-y-3 transition-all duration-700"
+                className="relative block h-full glass-card rounded-[2.5rem] overflow-hidden group-hover:border-white/40 group-hover:-translate-y-3 transition-all duration-700 bg-white/[0.02] border-white/10"
               >
                 {/* Image Section */}
                 <div className="relative aspect-[16/10] overflow-hidden">
@@ -59,7 +61,7 @@ export function ProjectGrid() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-1000 opacity-80"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-white/5 to-transparent" />
                   
                   {/* Floating Tech Stack */}
                   <div className="absolute bottom-6 left-6 flex flex-wrap gap-2 z-20">
