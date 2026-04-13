@@ -69,6 +69,19 @@ export const SKILLS = [
 export const TIMELINE = [
   {
     type: 'experience',
+    title: 'Python Full Stack Developer Intern (Gen AI)',
+    organization: 'KodNest',
+    location: 'Bengaluru, Karnataka',
+    period: 'Feb 2026 - Present',
+    points: [
+      'Optimized full-stack applications using Python, React, HTML, and CSS, resulting in improved system scalability.',
+      'Increased system efficiency by building RESTful APIs and optimizing MySQL queries, significantly enhancing overall performance.',
+      'Integrated Generative AI features and responsive UI components to improve user experience and platform functionality.'
+    ],
+    achievements: ['Gen AI Integration', 'Full Stack Optimization']
+  },
+  {
+    type: 'experience',
     title: 'Teaching Assistant',
     organization: 'NxtWave Technologies',
     period: '2023 - Present',
