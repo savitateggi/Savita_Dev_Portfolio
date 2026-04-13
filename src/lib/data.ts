@@ -27,7 +27,7 @@ export const PROJECTS = [
     description: 'An academic project focused on establishing reliable communication between vehicles using LoRa technology for safety applications.',
     technologies: ['C++', 'Arduino', 'LoRa Module', 'Sensors'],
     skillsDemonstrated: ['Hardware Integration', 'Problem Solving', 'Embedded Systems'],
-    githubLink: 'https://github.com/savitateggi/v2v-lora'
+    githubLink: 'https://github.com/savitateggi/V2V-communication-project'
   },
   {
     title: 'Todo List Application',
