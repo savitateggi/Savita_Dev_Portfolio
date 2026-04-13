@@ -18,7 +18,7 @@ export function Hero() {
           y: [0, -50, 0],
         }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[160px] -z-10" 
+        className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[160px] -z-10" 
       />
       
       <motion.div 
@@ -27,9 +27,19 @@ export function Hero() {
           opacity: [0.2, 0.4, 0.2],
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] -z-10" 
+        className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[140px] -z-10" 
       />
       
+      {/* Floating White Light Accents */}
+      <motion.div
+        animate={{ 
+          opacity: [0.1, 0.2, 0.1],
+          scale: [1, 1.5, 1],
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[20%] left-[20%] w-96 h-96 bg-white/5 rounded-full blur-[120px] -z-5"
+      />
+
       {/* Floating Frosted Spheres */}
       <motion.div
         animate={{ 
@@ -38,7 +48,7 @@ export function Hero() {
           rotate: [0, 360]
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[15%] left-[10%] w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl -z-5"
+        className="absolute top-[15%] left-[10%] w-40 h-40 bg-gradient-to-br from-primary/20 to-white/5 rounded-full blur-3xl -z-5"
       />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -56,13 +66,13 @@ export function Hero() {
             Available for New Opportunities
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-[0.9] text-foreground">
+          <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-[0.9] text-white">
             Full Stack <br/>
             <span className="text-gradient">Architect.</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed font-medium">
-            I'm <span className="text-foreground">Savita Teggi</span>, an ECE student & developer bridging the gap between <span className="text-accent underline decoration-accent/30 underline-offset-8">hardware precision</span> and <span className="text-primary underline decoration-primary/30 underline-offset-8">software elegance.</span>
+            I'm <span className="text-white">Savita Teggi</span>, an ECE student & developer bridging the gap between <span className="text-accent underline decoration-accent/30 underline-offset-8">hardware precision</span> and <span className="text-primary underline decoration-primary/30 underline-offset-8">software elegance.</span>
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -75,35 +85,21 @@ export function Hero() {
             
             <div className="flex items-center gap-3">
               <motion.a 
-                whileHover={{ y: -5, backgroundColor: "rgba(0,0,0,0.05)" }}
+                whileHover={{ y: -5, backgroundColor: "rgba(255,255,255,0.1)" }}
                 href="https://github.com/savitateggi" 
                 target="_blank" 
                 className="glass-button p-5 rounded-full"
               >
-                <Github size={24} className="text-foreground" />
+                <Github size={24} className="text-white" />
               </motion.a>
               <motion.a 
-                whileHover={{ y: -5, backgroundColor: "rgba(0,0,0,0.05)" }}
+                whileHover={{ y: -5, backgroundColor: "rgba(255,255,255,0.1)" }}
                 href="https://linkedin.com/in/savita-teggi-a15a90307" 
                 target="_blank" 
                 className="glass-button p-5 rounded-full"
               >
-                <Linkedin size={24} className="text-foreground" />
+                <Linkedin size={24} className="text-white" />
               </motion.a>
-            </div>
-          </div>
-
-          <div className="pt-12 flex items-center gap-6">
-            <div className="flex -space-x-4">
-              {[1, 2, 3, 4].map(i => (
-                <div key={i} className="w-12 h-12 rounded-full border-4 border-background bg-card relative overflow-hidden ring-1 ring-black/5">
-                  <Image src={`https://picsum.photos/seed/user_${i}/100/100`} fill alt="User" />
-                </div>
-              ))}
-            </div>
-            <div className="text-sm font-medium">
-              <p className="text-foreground">500+ Students Mentored</p>
-              <p className="text-muted-foreground">across NxtWave ecosystem</p>
             </div>
           </div>
         </motion.div>
@@ -116,7 +112,7 @@ export function Hero() {
         >
           <div className="relative group">
             {/* Animated Glow Border */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-[3rem] blur-xl opacity-10 group-hover:opacity-30 transition duration-1000"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-[3rem] blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
             
             <div className="relative w-[320px] h-[320px] md:w-[480px] md:h-[480px] rounded-[3rem] overflow-hidden glass-panel">
               <Image 
@@ -124,10 +120,10 @@ export function Hero() {
                 alt="Savita Teggi"
                 fill
                 priority
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                 data-ai-hint="professional woman developer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
             </div>
 
             {/* Experience Card Overlay */}
@@ -135,14 +131,14 @@ export function Hero() {
               initial={{ x: 30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="absolute -bottom-6 -right-6 md:bottom-12 md:-right-12 glass-panel p-6 rounded-3xl z-20 bg-white/80"
+              className="absolute -bottom-6 -right-6 md:bottom-12 md:-right-12 glass-panel p-6 rounded-3xl z-20"
             >
               <div className="flex items-center gap-4">
-                <div className="bg-primary/10 p-4 rounded-2xl border border-primary/20">
+                <div className="bg-primary/20 p-4 rounded-2xl border border-primary/30">
                   <MousePointer2 className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-4xl font-black text-foreground leading-none">2+</p>
+                  <p className="text-4xl font-black text-white leading-none">2+</p>
                   <p className="text-[10px] uppercase font-bold tracking-widest text-primary">Years Excellence</p>
                 </div>
               </div>
