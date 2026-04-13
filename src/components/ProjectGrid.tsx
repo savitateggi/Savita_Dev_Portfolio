@@ -2,111 +2,97 @@
 
 import React from 'react';
 import { PROJECTS } from '@/lib/data';
-import { Github, Code2, ArrowRight } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Github, Code2, ArrowUpRight, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15
-    }
-  }
-};
-
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-};
-
 export function ProjectGrid() {
   return (
-    <section id="projects" className="py-24 px-6 relative">
-      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] -z-10" />
+    <section id="projects" className="py-32 px-6 relative overflow-hidden">
+      <div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent" />
       
       <div className="max-w-7xl mx-auto">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
-        >
-          <div>
-            <Badge variant="outline" className="mb-4 border-primary/30 text-primary px-4 py-1">Portfolio</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Technical <span className="text-primary">Developments</span></h2>
-            <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-              Every line of code is a step toward building smarter systems. Explore my latest repositories on GitHub.
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+          <div className="space-y-4">
+            <Badge variant="outline" className="border-primary/30 text-primary px-4 py-1 uppercase tracking-widest text-[10px] font-bold bg-primary/5">
+              Case Studies
+            </Badge>
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-none">
+              Featured <span className="text-primary">Works.</span>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-xl font-medium leading-relaxed">
+              Engineering solutions that scale. Focused on AI integration and robust full-stack architectures.
             </p>
           </div>
           <motion.a 
-            whileHover={{ x: 5, scale: 1.05 }}
+            whileHover={{ scale: 1.05 }}
             href="https://github.com/savitateggi" 
             target="_blank" 
-            className="flex items-center gap-2 text-primary font-bold hover:text-accent transition-all glass-button px-8 py-4 rounded-full shadow-lg shadow-primary/10"
+            className="glass-button h-16 px-10 rounded-full flex items-center gap-3 font-bold text-sm uppercase tracking-widest shadow-xl shadow-black/20"
           >
-            <Github className="w-5 h-5" />
-            Full GitHub Profile
+            <Github size={18} />
+            Entire Repository
           </motion.a>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {PROJECTS.map((project, idx) => (
-            <motion.div key={idx} variants={item}>
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="group h-full"
+            >
               <a 
                 href={project.githubLink || `https://github.com/savitateggi`} 
                 target="_blank" 
-                className="block h-full group outline-none focus-visible:ring-2 ring-primary rounded-[var(--radius)]"
+                className="relative block h-full glass-card rounded-[2.5rem] overflow-hidden group-hover:border-primary/40 group-hover:-translate-y-3 transition-all duration-700"
               >
-                <Card className="h-full overflow-hidden glass-card glass-card-hover border-white/5 relative flex flex-col group-hover:translate-y-[-8px]">
-                  <div className="relative aspect-video overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/20 to-transparent z-10" />
-                    <Image 
-                      src={`https://picsum.photos/seed/${project.title.replace(/\s/g, '')}/600/400`}
-                      alt={project.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60 group-hover:opacity-100"
-                    />
-                    <div className="absolute top-4 left-4 z-20">
-                      <div className="bg-primary/30 backdrop-blur-md p-2 rounded-xl border border-white/10">
-                        <Code2 className="w-5 h-5 text-white" />
-                      </div>
+                {/* Image Section */}
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image 
+                    src={`https://picsum.photos/seed/${project.title.replace(/\s/g, '')}/800/500`}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000 opacity-80"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                  
+                  {/* Floating Tech Stack */}
+                  <div className="absolute bottom-6 left-6 flex flex-wrap gap-2 z-20">
+                    {project.technologies.slice(0, 3).map((tech, i) => (
+                      <span key={i} className="text-[9px] font-black uppercase tracking-widest bg-black/60 backdrop-blur-md text-white px-3 py-1.5 rounded-full border border-white/10">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="p-10 space-y-6">
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="text-2xl font-bold group-hover:text-primary transition-colors line-clamp-1">{project.title}</h3>
+                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                      <ArrowUpRight size={18} />
                     </div>
                   </div>
                   
-                  <CardContent className="p-7 flex-1 flex flex-col relative z-20">
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-1">{project.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-6 line-clamp-3 leading-relaxed">
-                      {project.description}
-                    </p>
+                  <p className="text-muted-foreground text-[15px] leading-relaxed line-clamp-3 font-medium">
+                    {project.description}
+                  </p>
 
-                    <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.slice(0, 3).map((tech, i) => (
-                          <span key={i} className="text-[10px] font-bold uppercase tracking-wider bg-primary/5 text-primary/80 border border-primary/10 px-2 py-1 rounded">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1 font-bold text-xs uppercase tracking-widest">
-                        Repo <ArrowRight className="w-4 h-4" />
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                  <div className="pt-6 border-t border-white/5 flex items-center justify-between text-[11px] font-black uppercase tracking-widest text-muted-foreground/60 group-hover:text-primary transition-colors">
+                    <span>Source Code Available</span>
+                    <Github size={14} />
+                  </div>
+                </div>
               </a>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
