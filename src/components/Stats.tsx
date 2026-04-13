@@ -3,11 +3,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Cpu, GraduationCap, Github } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const stats = [
   { label: 'Lines of Code', value: '50K+', icon: <Code2 />, color: 'text-primary' },
   { label: 'GitHub Repos', value: '25+', icon: <Github />, color: 'text-accent' },
-  { label: 'Student Queries', value: '500+', icon: <GraduationCap />, color: 'text-primary' },
+  { label: 'Academic Rating', value: '8.5+', icon: <GraduationCap />, color: 'text-primary' },
   { label: 'ECE Innovations', value: '10+', icon: <Cpu />, color: 'text-accent' },
 ];
 
@@ -64,5 +65,3 @@ export function Stats() {
     </section>
   );
 }
-
-import { cn } from '@/lib/utils';

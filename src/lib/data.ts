@@ -118,14 +118,6 @@ export const TIMELINE = [
     achievements: ['Gen AI Enthusiast', 'Scalable Systems']
   },
   {
-    type: 'experience',
-    title: 'Teaching Assistant (MERN Specialist)',
-    organization: 'NxtWave Technologies',
-    period: '2023 - Present',
-    description: 'Mentoring 500+ aspiring developers. I simplify complex backend concepts and guide students through high-impact Full Stack projects.',
-    achievements: ['Student Mentor', 'Code Reviewer']
-  },
-  {
     type: 'education',
     title: 'Bachelor of Engineering in ECE',
     organization: 'AMC Engineering College',
