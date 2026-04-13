@@ -36,10 +36,12 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-            <Button size="lg" className="rounded-full h-14 px-8 text-lg font-bold gap-2 shadow-lg shadow-primary/20 group">
-              Explore My Work
-              <ArrowDownRight className="w-5 h-5 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform" />
-            </Button>
+            <a href="#projects">
+              <Button size="lg" className="rounded-full h-14 px-8 text-lg font-bold gap-2 shadow-lg shadow-primary/20 group">
+                Explore My Work
+                <ArrowDownRight className="w-5 h-5 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform" />
+              </Button>
+            </a>
             
             <div className="flex items-center gap-4">
               <motion.a 
