@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { SOCIALS } from '@/lib/data';
-import { Mail, Linkedin, Github, Instagram, MapPin, Send, Info } from 'lucide-react';
+import { Mail, Linkedin, Github, Instagram, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -36,11 +36,12 @@ export function Contact() {
                 Let's <span className="text-muted-foreground">Connect</span>
               </h2>
 
-              <div className="bg-primary/5 border border-primary/10 rounded-2xl p-4 mb-8 flex items-center gap-4 text-xs font-medium text-primary/80">
-                <div className="bg-primary/20 p-2 rounded-lg">
-                  <Info className="w-4 h-4" />
+              <div className="bg-emerald-500/5 border border-emerald-500/10 rounded-2xl p-4 mb-8 flex items-center gap-4 text-xs font-medium text-emerald-400">
+                <div className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </div>
-                Live Preview Mode
+                Available for Collaborations
               </div>
 
               <p className="text-muted-foreground text-lg mb-12 leading-relaxed max-w-sm">
