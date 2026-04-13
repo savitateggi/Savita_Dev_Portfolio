@@ -13,31 +13,31 @@ export function Hero() {
       <motion.div 
         animate={{ 
           scale: [1, 1.1, 1],
-          opacity: [0.1, 0.3, 0.1],
+          opacity: [0.1, 0.4, 0.1],
           x: [0, 50, 0],
           y: [0, -50, 0],
         }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        className="absolute top-0 right-0 w-[700px] h-[700px] bg-white/5 rounded-full blur-[180px] -z-10" 
+        className="absolute top-0 right-0 w-[700px] h-[700px] bg-white/10 rounded-full blur-[180px] -z-10" 
       />
       
       <motion.div 
         animate={{ 
           scale: [1, 1.2, 1],
-          opacity: [0.05, 0.2, 0.05],
+          opacity: [0.08, 0.25, 0.08],
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute -bottom-20 -left-20 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[140px] -z-10" 
+        className="absolute -bottom-20 -left-20 w-[600px] h-[600px] bg-primary/15 rounded-full blur-[140px] -z-10" 
       />
       
       {/* Intense White Focal Glow */}
       <motion.div
         animate={{ 
-          opacity: [0.1, 0.25, 0.1],
+          opacity: [0.15, 0.3, 0.15],
           scale: [1, 1.3, 1],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[30%] left-[30%] w-full h-full bg-white/[0.03] rounded-full blur-[200px] -z-5"
+        className="absolute top-[30%] left-[30%] w-full h-full bg-white/[0.05] rounded-full blur-[200px] -z-5"
       />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -56,12 +56,12 @@ export function Hero() {
           </div>
 
           <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-[0.9] text-white">
-            Full Stack <br/>
-            <span className="text-gradient">Architect.</span>
+            Savita <br/>
+            <span className="text-gradient">Teggi.</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed font-medium">
-            I'm <span className="text-white">Savita Teggi</span>, an ECE student & developer bridging the gap between <span className="text-accent underline decoration-accent/30 underline-offset-8">hardware precision</span> and <span className="text-primary underline decoration-primary/30 underline-offset-8">software elegance.</span>
+            I'm a <span className="text-white">Full Stack Architect</span>, an ECE student & developer bridging the gap between <span className="text-accent underline decoration-accent/30 underline-offset-8">hardware precision</span> and <span className="text-primary underline decoration-primary/30 underline-offset-8">software elegance.</span>
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
