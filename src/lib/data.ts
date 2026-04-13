@@ -66,13 +66,48 @@ export const SKILLS = [
   }
 ];
 
+export const CERTIFICATIONS = [
+  {
+    title: "Python Full Stack Development",
+    issuer: "KodNest",
+    id: "KN-2024-7721",
+    date: "Feb 2024",
+    icon: "Code2",
+    color: "from-blue-500/20 to-emerald-500/20"
+  },
+  {
+    title: "Postman API Fundamentals Student Expert",
+    issuer: "Postman",
+    id: "PM-CERT-882",
+    date: "Nov 2023",
+    icon: "ShieldCheck",
+    color: "from-orange-500/20 to-red-500/20"
+  },
+  {
+    title: "MERN Stack Specialization",
+    issuer: "NxtWave",
+    id: "NW-MERN-901",
+    date: "Aug 2023",
+    icon: "Layers",
+    color: "from-purple-500/20 to-blue-500/20"
+  },
+  {
+    title: "LoRaWAN & IoT Foundations",
+    issuer: "Semtech Academy",
+    id: "IOT-LR-221",
+    date: "Dec 2023",
+    icon: "Cpu",
+    color: "from-emerald-500/20 to-blue-500/20"
+  }
+];
+
 export const TIMELINE = [
   {
     type: 'experience',
     title: 'Python Full Stack Developer Intern (Gen AI)',
     organization: 'KodNest',
     location: 'Bengaluru, Karnataka',
-    period: 'Feb 2026 - Present',
+    period: 'Feb 2024 - Present',
     points: [
       'Optimized full-stack applications using Python, React, HTML, and CSS, resulting in improved system scalability.',
       'Increased system efficiency by building RESTful APIs and optimizing MySQL queries, significantly enhancing overall performance.',
