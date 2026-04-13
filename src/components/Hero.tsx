@@ -15,18 +15,13 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="order-2 lg:order-1">
-          <Badge variant="outline" className="mb-6 bg-primary/10 text-primary border-primary/20 gap-2 px-4 py-1.5 rounded-full animate-bounce">
-            <Sparkles className="w-4 h-4" />
-            Welcome to my digital workshop
-          </Badge>
-          
           <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight leading-[1.1]">
             Hello, I'm <br/>
             <span className="text-gradient">Savita Teggi.</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            A passionate <span className="text-white font-medium underline decoration-primary decoration-2 underline-offset-4">Full Stack Developer</span> and CSE Student at AMC Engineering College, focused on building innovative, efficient, and user-centric digital experiences.
+            A passionate <span className="text-white font-medium underline decoration-primary decoration-2 underline-offset-4">Full Stack Developer</span> and ECE Student at AMC Engineering College, focused on building innovative, efficient, and user-centric digital experiences.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">

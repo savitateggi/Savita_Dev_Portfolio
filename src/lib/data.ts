@@ -77,10 +77,10 @@ export const TIMELINE = [
   },
   {
     type: 'education',
-    title: 'Bachelor of Engineering in CSE',
+    title: 'Bachelor of Engineering in ECE',
     organization: 'AMC Engineering College',
     period: '2021 - 2025',
-    description: 'Focused on Computer Science and Engineering with special interests in Web Technologies and Network Security.',
+    description: 'Focused on Electronics and Communication Engineering with special interests in Web Technologies and Hardware Integration.',
     achievements: ['Quantum Hacks 2025 Participant', 'Maintained 8.5+ CGPA']
   },
   {
@@ -105,6 +105,6 @@ export const SOCIALS = {
   email: 'teggisavi@gmail.com',
   linkedin: 'https://www.linkedin.com/in/savita-teggi-a15a90307',
   github: 'https://github.com/savitateggi',
-  leetcode: 'https://leetcode.com/u/Savitateggi021',
+  leetcode: 'https://leetcode.com/u/Savita_teggi021/',
   instagram: 'https://www.instagram.com/_savii_21/'
 };
