@@ -1,5 +1,12 @@
 export const PROJECTS = [
   {
+    title: 'MCP Learning Path Generator',
+    description: 'An AI-powered tool that generates personalized learning paths for Model Context Protocol (MCP) development, helping developers master custom tool and server implementations.',
+    technologies: ['TypeScript', 'Genkit', 'React', 'Tailwind CSS'],
+    skillsDemonstrated: ['AI Prompt Engineering', 'Full Stack Development', 'System Design'],
+    githubLink: 'https://github.com/savitateggi/mcp-learning-path-generator'
+  },
+  {
     title: 'Food Munch',
     description: 'A fully responsive food-themed website showcasing various menu items with smooth navigation and modern UI components.',
     technologies: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript'],

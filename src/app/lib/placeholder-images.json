@@ -7,6 +7,12 @@
       "imageHint": "woman developer professional"
     },
     {
+      "id": "project-mcp",
+      "description": "MCP Learning Path Generator tool interface",
+      "imageUrl": "https://picsum.photos/seed/mcpgen/600/400",
+      "imageHint": "ai education interface"
+    },
+    {
       "id": "project-food-munch",
       "description": "Food Munch responsive website",
       "imageUrl": "https://picsum.photos/seed/foodmunch/600/400",
