@@ -2,26 +2,25 @@
 
 import React from 'react';
 import { TIMELINE } from '@/lib/data';
-import { Briefcase, GraduationCap, Trophy, Calendar, MapPin, ArrowRight } from 'lucide-react';
+import { Briefcase, GraduationCap, Calendar, MapPin } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 
 export function ExperienceTimeline() {
   return (
-    <section id="timeline" className="py-32 px-6 relative bg-[#050505] overflow-hidden">
+    <section id="timeline" className="py-32 px-6 relative bg-background overflow-hidden">
       {/* Background divider line and glows */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-white/[0.02] rounded-full blur-[120px] -z-10" />
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-black/5 to-transparent" />
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] -z-10" />
       
       <div className="max-w-5xl mx-auto relative">
-        {/* Header Section */}
         <div className="text-center mb-24 space-y-6">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Badge className="bg-white/5 text-white border-white/20 px-6 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-[0.2em]">
+            <Badge className="bg-primary/10 text-primary border-primary/20 px-6 py-1.5 rounded-full text-[10px] uppercase font-bold tracking-[0.2em]">
               Milestones
             </Badge>
           </motion.div>
@@ -31,7 +30,7 @@ export function ExperienceTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-6xl md:text-8xl font-black tracking-tighter"
+            className="text-6xl md:text-8xl font-black tracking-tighter text-foreground"
           >
             Professional <span className="text-primary">Journey.</span>
           </motion.h2>
@@ -47,8 +46,7 @@ export function ExperienceTimeline() {
           </motion.p>
         </div>
 
-        {/* Timeline List */}
-        <div className="relative border-l-2 border-white/5 ml-4 md:ml-12 pl-8 md:pl-16 space-y-16">
+        <div className="relative border-l-2 border-primary/10 ml-4 md:ml-12 pl-8 md:pl-16 space-y-16">
           {TIMELINE.map((item, idx) => (
             <motion.div 
               key={idx} 
@@ -58,30 +56,29 @@ export function ExperienceTimeline() {
               transition={{ delay: idx * 0.1 }}
               className="relative"
             >
-              {/* Timeline Indicator */}
-              <div className="absolute -left-[41px] md:-left-[73px] top-0 w-10 h-10 glass-panel rounded-full z-10 flex items-center justify-center border-white/20 bg-background shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+              <div className="absolute -left-[41px] md:-left-[73px] top-0 w-10 h-10 glass-panel rounded-full z-10 flex items-center justify-center border-black/5 bg-background shadow-lg">
                 {item.type === 'experience' ? 
                   <Briefcase size={16} className="text-primary" /> : 
                   <GraduationCap size={18} className="text-accent" />
                 }
               </div>
               
-              <div className="glass-card p-8 md:p-12 rounded-[2.5rem] bg-white/[0.01] border-white/5 hover:border-white/20 transition-all duration-500 group">
+              <div className="glass-card p-8 md:p-12 rounded-[2.5rem] bg-white/60 hover:border-primary/20 transition-all duration-500 group">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-8">
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-primary transition-colors mb-2">
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
                       {item.title}
                     </h3>
                     <div className="flex flex-col gap-1">
-                      <span className="text-lg font-bold text-accent/90">{item.organization}</span>
+                      <span className="text-lg font-bold text-accent">{item.organization}</span>
                       {(item as any).location && (
                         <span className="text-muted-foreground text-sm flex items-center gap-2">
-                          <MapPin size={12} className="text-primary/60" /> {(item as any).location}
+                          <MapPin size={12} className="text-primary" /> {(item as any).location}
                         </span>
                       )}
                     </div>
                   </div>
-                  <div className="shrink-0 bg-white/5 px-5 py-2 rounded-xl border border-white/10 font-black text-[10px] uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                  <div className="shrink-0 bg-primary/5 px-5 py-2 rounded-xl border border-primary/10 font-black text-[10px] uppercase tracking-widest text-primary flex items-center gap-2">
                     <Calendar size={12} />
                     {item.period}
                   </div>
@@ -107,7 +104,7 @@ export function ExperienceTimeline() {
                 {item.achievements && (
                   <div className="mt-8 flex flex-wrap gap-2">
                     {item.achievements.map((achievement, i) => (
-                      <Badge key={i} variant="outline" className="bg-white/5 text-white border-white/10 px-4 py-1 text-[9px] uppercase font-black tracking-widest">
+                      <Badge key={i} variant="outline" className="bg-primary/5 text-primary border-primary/10 px-4 py-1 text-[9px] uppercase font-black tracking-widest">
                         {achievement}
                       </Badge>
                     ))}

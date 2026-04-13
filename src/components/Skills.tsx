@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from 'react';
@@ -36,15 +35,12 @@ const SKILL_GROUPS = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 relative overflow-hidden bg-[#050505]">
-      {/* Background Subtle Pattern */}
+    <section id="skills" className="py-24 px-6 relative overflow-hidden bg-background">
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-           style={{ backgroundImage: `radial-gradient(#ffffff 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
+           style={{ backgroundImage: `radial-gradient(#000000 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          
-          {/* Left Column: Header & Focus */}
           <div className="lg:col-span-5 space-y-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -52,12 +48,12 @@ export function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary border-primary/20 px-4 py-1 rounded-full text-[10px] uppercase font-bold tracking-widest">
+              <Badge variant="secondary" className="mb-6 bg-primary/10 text-primary border-primary/20 px-4 py-1 rounded-full text-[10px] uppercase font-bold tracking-widest">
                 Tech Stack
               </Badge>
-              <h2 className="text-6xl md:text-7xl font-bold mb-8 tracking-tighter leading-none">
+              <h2 className="text-6xl md:text-7xl font-bold mb-8 tracking-tighter leading-none text-foreground">
                 Technical <br />
-                <span className="text-muted-foreground/40">Expertise</span>
+                <span className="text-muted-foreground/30">Expertise</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
                 Equipped with a comprehensive set of technologies to build modern, scalable, and user-friendly web applications.
@@ -69,14 +65,14 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="glass-card p-10 rounded-[2.5rem] bg-white/[0.02] border-white/5 relative group overflow-hidden"
+              className="glass-card p-10 rounded-[2.5rem] bg-white/60 relative group overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl -z-10" />
               <div className="flex items-start gap-4 mb-6">
                 <div className="p-3 rounded-xl bg-primary/10 text-primary">
                   <Cpu className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold">Key Focus</h3>
+                <h3 className="text-xl font-bold text-foreground">Key Focus</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 Deeply interested in Backend Architecture, Database Optimization, and building seamless Developer Experiences through AI-integrated workflows.
@@ -84,7 +80,6 @@ export function Skills() {
             </motion.div>
           </div>
 
-          {/* Right Column: Skill Cards Grid */}
           <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
             {SKILL_GROUPS.map((group, idx) => (
               <motion.div
@@ -93,13 +88,13 @@ export function Skills() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
-                className="glass-card p-8 rounded-[3rem] bg-white/[0.03] border-white/5 hover:border-primary/30 transition-all duration-500 group"
+                className="glass-card p-8 rounded-[3rem] bg-white/40 hover:border-primary/30 transition-all duration-500 group"
               >
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
                     {group.icon}
                   </div>
-                  <h3 className="text-2xl font-bold">{group.title}</h3>
+                  <h3 className="text-2xl font-bold text-foreground">{group.title}</h3>
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-10">
@@ -107,7 +102,7 @@ export function Skills() {
                     <Badge 
                       key={i} 
                       variant="secondary" 
-                      className="px-3 py-1 bg-white/5 hover:bg-white/10 transition-colors border-white/5 text-[11px] font-medium text-muted-foreground hover:text-white"
+                      className="px-3 py-1 bg-black/5 hover:bg-primary/10 transition-colors border-transparent text-[11px] font-medium text-muted-foreground hover:text-primary"
                     >
                       {skill}
                     </Badge>
@@ -115,13 +110,13 @@ export function Skills() {
                 </div>
 
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">
+                  <div className="flex justify-between items-center text-[10px] uppercase font-black tracking-widest text-muted-foreground">
                     <span>Proficiency</span>
                     <span className="text-primary">{group.proficiency}%</span>
                   </div>
                   <Progress 
                     value={group.proficiency} 
-                    className="h-1.5 bg-white/5" 
+                    className="h-1.5 bg-black/5" 
                   />
                 </div>
               </motion.div>
@@ -132,4 +127,3 @@ export function Skills() {
     </section>
   );
 }
-
