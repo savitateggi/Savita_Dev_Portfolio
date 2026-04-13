@@ -27,7 +27,7 @@ export const PROJECTS = [
     technologies: ['JavaScript', 'REST API', 'Fetch', 'CSS'],
     skillsDemonstrated: ['API Integration', 'Asynchronous Programming', 'DOM Manipulation'],
     vercelLink: 'https://wiki-search-app-savita.vercel.app',
-    githubLink: 'https://github.com/savitateggi/wikipedia-search-app'
+    githubLink: 'https://github.com/savitateggi/Wikipedia-Search-Application'
   },
   {
     title: 'Vehicle-to-Vehicle Communication Using LoRa',
