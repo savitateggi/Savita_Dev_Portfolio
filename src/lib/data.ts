@@ -1,5 +1,12 @@
 export const PROJECTS = [
   {
+    title: 'Job App',
+    description: 'A comprehensive job search and application platform featuring advanced filtering, user profiles, and real-time application status tracking.',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+    skillsDemonstrated: ['Full Stack Development', 'REST API Design', 'State Management'],
+    githubLink: 'https://github.com/savitateggi/job-app'
+  },
+  {
     title: 'MCP Learning Path Generator',
     description: 'An AI-powered tool that generates personalized learning paths for Model Context Protocol (MCP) development, helping developers master custom tool and server implementations.',
     technologies: ['TypeScript', 'Genkit', 'React', 'Tailwind CSS'],
@@ -36,13 +43,6 @@ export const PROJECTS = [
     skillsDemonstrated: ['State Management', 'Persistence', 'Component-Based Architecture'],
     vercelLink: 'https://todo-list-savita.vercel.app',
     githubLink: 'https://github.com/savitateggi/todo-app'
-  },
-  {
-    title: 'Guessing Game',
-    description: 'An interactive numbers-based game with real-time feedback and session-based score tracking.',
-    technologies: ['HTML5', 'CSS3', 'JavaScript'],
-    skillsDemonstrated: ['Event Handling', 'Logic Implementation'],
-    vercelLink: 'https://guess-the-number-savita.vercel.app'
   }
 ];
 

@@ -33,11 +33,11 @@ export function Hero() {
       {/* Intense White Focal Glow */}
       <motion.div
         animate={{ 
-          opacity: [0.15, 0.3, 0.15],
-          scale: [1, 1.3, 1],
+          opacity: [0.15, 0.35, 0.15],
+          scale: [1, 1.4, 1],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[30%] left-[30%] w-full h-full bg-white/[0.05] rounded-full blur-[200px] -z-5"
+        className="absolute top-[30%] left-[30%] w-full h-full bg-white/[0.06] rounded-full blur-[220px] -z-5"
       />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -56,12 +56,12 @@ export function Hero() {
           </div>
 
           <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-[0.9] text-white">
-            Full Stack <br/>
-            <span className="text-gradient">Architect.</span>
+            Savita <br/>
+            <span className="text-gradient">Teggi.</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed font-medium">
-            I'm <span className="text-white">Savita Teggi</span>, an ECE student & developer bridging the gap between <span className="text-accent underline decoration-accent/30 underline-offset-8">hardware precision</span> and <span className="text-primary underline decoration-primary/30 underline-offset-8">software elegance.</span>
+            I'm a <span className="text-white">Full Stack Architect</span>, an ECE student & developer bridging the gap between <span className="text-accent underline decoration-accent/30 underline-offset-8">hardware precision</span> and <span className="text-primary underline decoration-primary/30 underline-offset-8">software elegance.</span>
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -100,7 +100,7 @@ export function Hero() {
           className="lg:col-span-5 flex justify-center lg:justify-end"
         >
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-white/20 via-primary/20 to-white/20 rounded-[3rem] blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-white/20 via-primary/20 to-white/20 rounded-[3rem] blur-xl opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             
             <div className="relative w-[320px] h-[320px] md:w-[480px] md:h-[480px] rounded-[3rem] overflow-hidden glass-panel">
               <Image 
@@ -108,10 +108,10 @@ export function Hero() {
                 alt="Savita Teggi"
                 fill
                 priority
-                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-85"
                 data-ai-hint="professional woman developer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-90" />
             </div>
           </div>
         </motion.div>
