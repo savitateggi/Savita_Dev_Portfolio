@@ -9,47 +9,45 @@ import { motion } from 'framer-motion';
 export function Hero() {
   return (
     <section id="about" className="relative min-h-screen pt-40 pb-20 px-6 overflow-hidden flex items-center">
-      {/* 3D Background Elements with White Accents */}
+      {/* 3D Background Elements with Enhanced White Glows */}
       <motion.div 
         animate={{ 
           scale: [1, 1.1, 1],
-          opacity: [0.3, 0.4, 0.3],
-          x: [0, 100, 0],
-          y: [0, -100, 0],
-          rotate: [0, 45, 0]
+          opacity: [0.3, 0.5, 0.3],
+          x: [0, 50, 0],
+          y: [0, -50, 0],
         }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute top-20 right-[10%] w-[500px] h-[500px] bg-white/10 rounded-full blur-[140px] -z-10" 
+        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/10 rounded-full blur-[160px] -z-10" 
       />
+      
       <motion.div 
         animate={{ 
           scale: [1, 1.2, 1],
-          opacity: [0.2, 0.3, 0.2],
-          x: [0, -80, 0],
-          y: [0, 80, 0],
-          rotate: [0, -30, 0]
+          opacity: [0.2, 0.4, 0.2],
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom-10 left-[10%] w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] -z-10" 
+        className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[140px] -z-10" 
       />
       
-      {/* Floating 3D White Spheres */}
+      {/* Floating Frosted White Spheres */}
       <motion.div
         animate={{ 
-          y: [0, -20, 0],
-          x: [0, 10, 0],
-          rotateZ: [0, 360]
+          y: [0, -40, 0],
+          x: [0, 20, 0],
+          rotate: [0, 360]
         }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-2xl -z-5 animate-pulse"
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[15%] left-[10%] w-40 h-40 bg-gradient-to-br from-white/30 to-transparent rounded-full blur-3xl -z-5"
       />
+      
       <motion.div
         animate={{ 
-          y: [0, 30, 0],
-          x: [0, -20, 0],
+          y: [0, 50, 0],
+          x: [0, -30, 0],
         }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-gradient-to-tr from-white/10 via-primary/5 to-transparent rounded-full blur-3xl -z-5"
+        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-[20%] right-[15%] w-64 h-64 bg-gradient-to-tr from-white/10 via-primary/5 to-transparent rounded-full blur-[100px] -z-5"
       />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -126,8 +124,8 @@ export function Hero() {
           className="lg:col-span-5 flex justify-center lg:justify-end"
         >
           <div className="relative group">
-            {/* Animated Glow Border with White Accent */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-white/40 to-accent rounded-[3rem] blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+            {/* Animated Glow Border with Strong White Accent */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-white to-accent rounded-[3rem] blur-xl opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
             
             <div className="relative w-[320px] h-[320px] md:w-[480px] md:h-[480px] rounded-[3rem] overflow-hidden glass-panel border-white/20">
               <Image 
@@ -138,7 +136,7 @@ export function Hero() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 data-ai-hint="professional woman developer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-white/5 to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-white/10 to-transparent opacity-60" />
             </div>
 
             {/* Experience Card Overlay */}
@@ -146,7 +144,7 @@ export function Hero() {
               initial={{ x: 30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="absolute -bottom-6 -right-6 md:bottom-12 md:-right-12 glass-panel p-6 rounded-3xl z-20 bg-white/[0.05] border-white/20"
+              className="absolute -bottom-6 -right-6 md:bottom-12 md:-right-12 glass-panel p-6 rounded-3xl z-20 bg-white/[0.08] border-white/30"
             >
               <div className="flex items-center gap-4">
                 <div className="bg-primary/20 p-4 rounded-2xl border border-primary/30">
