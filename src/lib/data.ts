@@ -78,7 +78,7 @@ export const CERTIFICATIONS = [
     title: "Python Full Stack Development",
     issuer: "KodNest",
     id: "KN-2024-7721",
-    date: "FEB 2024",
+    date: "FEB 2026",
     icon: "Code2",
     color: "from-blue-500/10 to-emerald-500/10"
   },
@@ -98,7 +98,7 @@ export const TIMELINE = [
     title: 'Python Full Stack Developer Intern (Gen AI)',
     organization: 'KodNest',
     location: 'Bengaluru, Karnataka',
-    period: 'Feb 2024 - Present',
+    period: 'Feb 2026 - Present',
     points: [
       'Architecting scalable full-stack applications leveraging Python and React frameworks.',
       'Optimizing backend efficiency through RESTful API design and MySQL query tuning.',
