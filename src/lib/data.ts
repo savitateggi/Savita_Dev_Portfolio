@@ -92,6 +92,17 @@ export const CERTIFICATIONS = [
   }
 ];
 
+export const ACHIEVEMENTS = [
+  {
+    id: '01',
+    text: 'Participated in Quantum Hacks 2025, a national-level hackathon held in Bengaluru.'
+  },
+  {
+    id: '02',
+    text: 'Participated in AWS workshops by NxtWave, gaining practical cloud computing experience.'
+  }
+];
+
 export const TIMELINE = [
   {
     type: 'experience',

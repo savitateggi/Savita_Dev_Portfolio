@@ -4,6 +4,7 @@ import { ProjectGrid } from '@/components/ProjectGrid';
 import { Skills } from '@/components/Skills';
 import { ExperienceTimeline } from '@/components/ExperienceTimeline';
 import { Certifications } from '@/components/Certifications';
+import { Achievements } from '@/components/Achievements';
 import { Contact } from '@/components/Contact';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <ProjectGrid />
         <Certifications />
+        <Achievements />
         <Skills />
         <ExperienceTimeline />
         <Contact />
