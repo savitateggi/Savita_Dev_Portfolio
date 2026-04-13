@@ -137,7 +137,7 @@ export const TIMELINE = [
     type: 'education',
     title: 'Pre-University (Computer Science)',
     organization: 'EXCELLENT PU College',
-    period: '2019 - 2021',
+    period: '2021 - 2022',
     description: 'The beginning of my fascination with logic and problem solving.',
     achievements: ['CS Distinction']
   }
