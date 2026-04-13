@@ -129,7 +129,7 @@ export const TIMELINE = [
     type: 'education',
     title: 'Bachelor of Engineering in ECE',
     organization: 'AMC Engineering College',
-    period: '2021 - 2025',
+    period: '2022 - 2026',
     description: 'Specializing in Electronics & Communication. Bridging the gap between hardware architecture and high-level software engineering.',
     achievements: ['Quantum Hacks 2025 Finalist', 'Academic Excellence (8.5+ CGPA)']
   },
