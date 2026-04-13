@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { PROJECTS } from '@/lib/data';
-import { Github, ExternalLink, Code2 } from 'lucide-react';
+import { Github, Code2, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
@@ -13,19 +13,21 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.15
     }
   }
 };
 
 const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
 export function ProjectGrid() {
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-24 px-6 relative">
+      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px] -z-10" />
+      
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -34,19 +36,20 @@ export function ProjectGrid() {
           className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
         >
           <div>
-            <h2 className="text-4xl font-bold mb-4 tracking-tight">Featured Projects</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl">
-              A selection of my best work, ranging from hardware integrations to responsive web applications.
+            <Badge variant="outline" className="mb-4 border-primary/30 text-primary px-4 py-1">Portfolio</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Technical <span className="text-primary">Developments</span></h2>
+            <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+              Every line of code is a step toward building smarter systems. Explore my latest repositories on GitHub.
             </p>
           </div>
           <motion.a 
-            whileHover={{ x: 5 }}
+            whileHover={{ x: 5, scale: 1.05 }}
             href="https://github.com/savitateggi" 
             target="_blank" 
-            className="flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors"
+            className="flex items-center gap-2 text-primary font-bold hover:text-accent transition-all glass-button px-8 py-4 rounded-full shadow-lg shadow-primary/10"
           >
             <Github className="w-5 h-5" />
-            View all on GitHub
+            Full GitHub Profile
           </motion.a>
         </motion.div>
 
@@ -59,61 +62,48 @@ export function ProjectGrid() {
         >
           {PROJECTS.map((project, idx) => (
             <motion.div key={idx} variants={item}>
-              <Card className="group h-full overflow-hidden glass-card border-white/10 hover:border-primary/50 transition-all duration-500">
-                <div className="relative aspect-video overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent z-10" />
-                  <Image 
-                    src={`https://picsum.photos/seed/${project.title.replace(/\s/g, '')}/600/400`}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100"
-                    data-ai-hint="code project"
-                  />
-                  <div className="absolute top-4 right-4 z-20 flex gap-2">
-                    {project.vercelLink && (
-                      <Badge className="bg-primary text-white font-bold border-none">Live</Badge>
-                    )}
-                  </div>
-                </div>
-                
-                <CardContent className="p-6 relative z-20">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="bg-primary/20 p-2 rounded-lg mb-4 inline-block">
-                      <Code2 className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="flex gap-4">
-                      {project.githubLink && (
-                        <motion.a whileHover={{ y: -2 }} href={project.githubLink} target="_blank" className="hover:text-primary transition-colors">
-                          <Github className="w-5 h-5" />
-                        </motion.a>
-                      )}
-                      {project.vercelLink && (
-                        <motion.a whileHover={{ y: -2 }} href={project.vercelLink} target="_blank" className="hover:text-accent transition-colors">
-                          <ExternalLink className="w-5 h-5" />
-                        </motion.a>
-                      )}
+              <a 
+                href={project.githubLink || `https://github.com/savitateggi`} 
+                target="_blank" 
+                className="block h-full group outline-none focus-visible:ring-2 ring-primary rounded-[var(--radius)]"
+              >
+                <Card className="h-full overflow-hidden glass-card glass-card-hover border-white/5 relative flex flex-col group-hover:translate-y-[-8px]">
+                  <div className="relative aspect-video overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/20 to-transparent z-10" />
+                    <Image 
+                      src={`https://picsum.photos/seed/${project.title.replace(/\s/g, '')}/600/400`}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60 group-hover:opacity-100"
+                    />
+                    <div className="absolute top-4 left-4 z-20">
+                      <div className="bg-primary/30 backdrop-blur-md p-2 rounded-xl border border-white/10">
+                        <Code2 className="w-5 h-5 text-white" />
+                      </div>
                     </div>
                   </div>
+                  
+                  <CardContent className="p-7 flex-1 flex flex-col relative z-20">
+                    <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-1">{project.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-6 line-clamp-3 leading-relaxed">
+                      {project.description}
+                    </p>
 
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-6 line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech, i) => (
-                      <span key={i} className="text-[10px] font-bold uppercase tracking-wider bg-white/5 border border-white/10 px-2 py-1 rounded text-foreground/60">
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-foreground/40 px-2 py-1">
-                        +{project.technologies.length - 3} more
-                      </span>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
+                    <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.slice(0, 3).map((tech, i) => (
+                          <span key={i} className="text-[10px] font-bold uppercase tracking-wider bg-primary/5 text-primary/80 border border-primary/10 px-2 py-1 rounded">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1 font-bold text-xs uppercase tracking-widest">
+                        Repo <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
             </motion.div>
           ))}
         </motion.div>

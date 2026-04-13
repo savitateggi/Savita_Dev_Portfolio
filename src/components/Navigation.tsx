@@ -21,7 +21,6 @@ export function Navigation() {
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Timeline', href: '#timeline' },
-    { name: 'Inquiry', href: '#ai-inquiry' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -32,10 +31,12 @@ export function Navigation() {
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          <div className="bg-primary p-2 rounded-lg group-hover:rotate-12 transition-transform shadow-lg shadow-primary/20">
+          <div className="bg-primary p-2 rounded-xl group-hover:rotate-12 transition-transform shadow-lg shadow-primary/30">
             <Code2 className="text-white w-6 h-6" />
           </div>
-          <span className="font-bold text-xl tracking-tight hidden sm:block">Savita's <span className="text-primary">Codefolio</span></span>
+          <span className="font-bold text-xl tracking-tight hidden sm:block">
+            Savita<span className="text-primary">.dev</span>
+          </span>
         </a>
 
         {/* Desktop Links */}
@@ -44,7 +45,7 @@ export function Navigation() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium hover:text-primary transition-colors relative group"
+              className="text-sm font-medium hover:text-primary transition-colors relative group opacity-80 hover:opacity-100"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
@@ -52,7 +53,7 @@ export function Navigation() {
           ))}
           <a 
             href="#contact" 
-            className="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all hover:shadow-[0_0_20px_rgba(96,51,204,0.6)]"
+            className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(96,51,204,0.4)]"
           >
             Hire Me
           </a>

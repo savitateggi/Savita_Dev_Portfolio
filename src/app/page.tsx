@@ -3,7 +3,7 @@ import { Hero } from '@/components/Hero';
 import { ProjectGrid } from '@/components/ProjectGrid';
 import { Skills } from '@/components/Skills';
 import { ExperienceTimeline } from '@/components/ExperienceTimeline';
-import { AIInquiry } from '@/components/AIInquiry';
+import { Stats } from '@/components/Stats';
 import { Contact } from '@/components/Contact';
 
 export default function Home() {
@@ -13,9 +13,9 @@ export default function Home() {
       <main>
         <Hero />
         <ProjectGrid />
+        <Stats />
         <Skills />
         <ExperienceTimeline />
-        <AIInquiry />
         <Contact />
       </main>
     </div>

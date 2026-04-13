@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    --background: 264 8% 11%;
+    --background: 264 8% 8%;
     --foreground: 0 0% 98%;
-    --card: 264 8% 13%;
+    --card: 264 8% 10%;
     --card-foreground: 0 0% 98%;
-    --popover: 264 8% 11%;
+    --popover: 264 8% 8%;
     --popover-foreground: 0 0% 98%;
-    --primary: 258 60% 50%;
+    --primary: 258 60% 55%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 264 8% 18%;
+    --secondary: 264 8% 15%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 264 8% 18%;
+    --muted: 264 8% 15%;
     --muted-foreground: 264 5% 70%;
-    --accent: 224 100% 82%;
+    --accent: 224 100% 85%;
     --accent-foreground: 224 10% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 264 8% 20%;
-    --input: 264 8% 20%;
-    --ring: 258 60% 50%;
-    --radius: 1rem;
+    --border: 264 8% 18%;
+    --input: 264 8% 18%;
+    --ring: 258 60% 55%;
+    --radius: 1.25rem;
   }
 }
 
@@ -40,13 +40,25 @@
 }
 
 .glass-card {
-  @apply bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+  @apply bg-white/[0.04] backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)];
+}
+
+.glass-card-hover {
+  @apply transition-all duration-500 hover:bg-white/[0.08] hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(96,51,204,0.3)];
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6033CC] to-[#A1BBFF];
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#7C3AED] via-[#A1BBFF] to-[#7C3AED] bg-[length:200%_auto] animate-gradient;
 }
 
 .nav-glass {
-  @apply bg-background/40 backdrop-blur-lg border-b border-white/5;
+  @apply bg-background/60 backdrop-blur-xl border-b border-white/5;
+}
+
+.glass-button {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all;
+}
+
+.glass-morphic-stats {
+  @apply bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-2xl border border-white/[0.08] shadow-2xl;
 }
