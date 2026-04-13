@@ -2,15 +2,14 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CERTIFICATIONS } from '@/lib/data';
+import { CERTIFICATIONS, SOCIALS } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
-import { Code2, ShieldCheck, Layers, Cpu, Award } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Code2, Layers, Award, Github, Linkedin, FileText } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
   Code2: <Code2 className="w-6 h-6" />,
-  ShieldCheck: <ShieldCheck className="w-6 h-6" />,
   Layers: <Layers className="w-6 h-6" />,
-  Cpu: <Cpu className="w-6 h-6" />,
 };
 
 export function Certifications() {
@@ -22,10 +21,11 @@ export function Certifications() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 border-primary/30 text-primary px-4 py-1 uppercase tracking-widest text-[10px] font-bold">Credentials</Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Professional <span className="text-primary">Accolades</span></h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Technical <span className="text-primary">Specializations</span></h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Focused expertise in modern stack development and high-performance architectures.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {CERTIFICATIONS.map((cert, idx) => (
             <motion.div
               key={idx}
@@ -83,12 +83,34 @@ export function Certifications() {
           <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-accent/5 blur-[100px] rounded-full" />
           
           <h2 className="text-3xl md:text-5xl font-bold mb-8 relative z-10 leading-[1.2]">
-            Bridging complex <span className="text-primary">hardware</span> with <br className="hidden md:block" />
-            elegant, <span className="text-accent italic">intelligent</span> software solutions.
+            Professional <span className="text-primary">Toolkit</span> & <br className="hidden md:block" />
+            Social <span className="text-accent italic">Ecosystem.</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto relative z-10 leading-relaxed font-medium">
-            Currently evolving at <span className="text-white">AMC Engineering College</span>, I specialize in the intersection of Embedded Systems and Full-Stack development, driven by the future of Generative AI.
+          
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto relative z-10 leading-relaxed font-medium mb-12">
+            Bridging the gap between complex hardware systems and elegant software solutions. Dive deeper into my professional background through my curated profiles.
           </p>
+
+          <div className="flex flex-wrap justify-center gap-6 relative z-10">
+            <motion.a whileHover={{ y: -5 }} href={SOCIALS.resume} target="_blank">
+              <Button variant="outline" className="glass-button h-14 px-8 rounded-2xl gap-3 text-base font-bold border-primary/20 hover:bg-primary hover:text-white transition-all">
+                <FileText className="w-5 h-5" />
+                View Resume
+              </Button>
+            </motion.a>
+            <motion.a whileHover={{ y: -5 }} href={SOCIALS.github} target="_blank">
+              <Button variant="outline" className="glass-button h-14 px-8 rounded-2xl gap-3 text-base font-bold border-white/10 hover:border-primary/50">
+                <Github className="w-5 h-5" />
+                GitHub Repos
+              </Button>
+            </motion.a>
+            <motion.a whileHover={{ y: -5 }} href={SOCIALS.linkedin} target="_blank">
+              <Button variant="outline" className="glass-button h-14 px-8 rounded-2xl gap-3 text-base font-bold border-white/10 hover:border-primary/50">
+                <Linkedin className="w-5 h-5" />
+                LinkedIn Profile
+              </Button>
+            </motion.a>
+          </div>
         </motion.div>
       </div>
     </section>

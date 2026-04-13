@@ -83,28 +83,12 @@ export const CERTIFICATIONS = [
     color: "from-blue-500/10 to-emerald-500/10"
   },
   {
-    title: "Postman API Fundamentals Student Expert",
-    issuer: "Postman",
-    id: "PM-CERT-882",
-    date: "NOV 2023",
-    icon: "ShieldCheck",
-    color: "from-orange-500/10 to-red-500/10"
-  },
-  {
     title: "MERN Stack Specialization",
     issuer: "NxtWave",
     id: "NW-MERN-901",
     date: "AUG 2023",
     icon: "Layers",
     color: "from-purple-500/10 to-blue-500/10"
-  },
-  {
-    title: "LoRaWAN & IoT Foundations",
-    issuer: "Semtech Academy",
-    id: "IOT-LR-221",
-    date: "DEC 2023",
-    icon: "Cpu",
-    color: "from-emerald-500/10 to-blue-500/10"
   }
 ];
 
@@ -153,5 +137,6 @@ export const SOCIALS = {
   linkedin: 'https://www.linkedin.com/in/savita-teggi-a15a90307',
   github: 'https://github.com/savitateggi',
   leetcode: 'https://leetcode.com/u/Savita_teggi021/',
-  instagram: 'https://www.instagram.com/_savii_21/'
+  instagram: 'https://www.instagram.com/_savii_21/',
+  resume: '#' // Placeholder for resume link
 };
