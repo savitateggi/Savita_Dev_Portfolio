@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { SOCIALS } from '@/lib/data';
-import { Mail, Linkedin, Github, Instagram, Code, MapPin, Send, Info } from 'lucide-react';
+import { Mail, Linkedin, Github, Instagram, MapPin, Send, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -122,7 +122,7 @@ export function Contact() {
         </motion.div>
 
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center text-muted-foreground text-sm gap-4">
-          <p>© {new Date().getFullYear()} Savita Teggi. Crafted with Glassmorphism.</p>
+          <p>© {new Date().getFullYear()} Savita Teggi. Built with Passion & Code.</p>
           <div className="flex gap-6">
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
