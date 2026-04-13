@@ -37,12 +37,11 @@ export const PROJECTS = [
     githubLink: 'https://github.com/savitateggi/V2V-communication-project'
   },
   {
-    title: 'Todo List Application',
-    description: 'A feature-rich todo application with local storage persistence and dynamic task management.',
-    technologies: ['React', 'JavaScript', 'CSS Modules'],
-    skillsDemonstrated: ['State Management', 'Persistence', 'Component-Based Architecture'],
-    vercelLink: 'https://todo-list-savita.vercel.app',
-    githubLink: 'https://github.com/savitateggi/todo-app'
+    title: 'Weather Check App',
+    description: 'A sophisticated real-time weather tracking application providing meteorological data and forecasts with a clean, glassmorphic interface.',
+    technologies: ['React', 'OpenWeather API', 'Tailwind CSS'],
+    skillsDemonstrated: ['API Integration', 'Responsive Design', 'Asynchronous Operations'],
+    vercelLink: 'https://weatherstack-zeta.vercel.app/'
   }
 ];
 

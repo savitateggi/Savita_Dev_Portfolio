@@ -37,7 +37,7 @@ export function Hero() {
           scale: [1, 1.4, 1],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[30%] left-[30%] w-full h-full bg-white/[0.06] rounded-full blur-[220px] -z-5"
+        className="absolute top-[30%] left-[30%] w-full h-full bg-white/[0.08] rounded-full blur-[220px] -z-5"
       />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -56,12 +56,12 @@ export function Hero() {
           </div>
 
           <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-[0.9] text-white">
-            Full Stack <br/>
-            <span className="text-gradient">Architect.</span>
+            Savita <br/>
+            <span className="text-gradient">Teggi.</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed font-medium">
-            I'm <span className="text-white">Savita Teggi</span>, an ECE student & developer bridging the gap between <span className="text-accent underline decoration-accent/30 underline-offset-8">hardware precision</span> and <span className="text-primary underline decoration-primary/30 underline-offset-8">software elegance.</span>
+            I'm a <span className="text-white">Full Stack Architect</span>, an ECE student & developer bridging the gap between <span className="text-accent underline decoration-accent/30 underline-offset-8">hardware precision</span> and <span className="text-primary underline decoration-primary/30 underline-offset-8">software elegance.</span>
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">

@@ -31,10 +31,10 @@
       "imageHint": "electronics hardware communication"
     },
     {
-      "id": "project-todo",
-      "description": "Dynamic todo list application",
-      "imageUrl": "https://picsum.photos/seed/todo/600/400",
-      "imageHint": "task management app"
+      "id": "project-weather",
+      "description": "Weather Check application interface",
+      "imageUrl": "https://picsum.photos/seed/weather/600/400",
+      "imageHint": "weather forecast application"
     }
   ]
 }
