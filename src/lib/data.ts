@@ -95,51 +95,51 @@ export const CERTIFICATIONS = [
 export const ACHIEVEMENTS = [
   {
     id: '01',
-    text: 'Participated in Quantum Hacks 2025, a national-level hackathon held in Bengaluru.'
+    text: 'Finalist at Quantum Hacks 2025, National Level Hackathon.'
   },
   {
     id: '02',
-    text: 'Participated in AWS workshops by NxtWave, gaining practical cloud computing experience.'
+    text: 'AWS Cloud Practitioner Training & Workshops by NxtWave.'
   }
 ];
 
 export const TIMELINE = [
   {
     type: 'experience',
-    title: 'Python Full Stack Developer Intern (Gen AI)',
+    title: 'Gen AI & Python Developer Intern',
     organization: 'KodNest',
-    location: 'Bengaluru, Karnataka',
+    location: 'Bengaluru, KA',
     period: 'Feb 2026 - Present',
     points: [
-      'Architecting scalable full-stack applications leveraging Python and React frameworks.',
-      'Optimizing backend efficiency through RESTful API design and MySQL query tuning.',
-      'Implementing cutting-edge Generative AI features to automate development workflows.'
+      'Building AI-driven backends with Python.',
+      'Optimizing data flow with RESTful architectures.',
+      'Bridging complex logic with modern React frontends.'
     ],
-    achievements: ['Gen AI Specialist', 'Backend Optimization']
+    achievements: ['Gen AI Enthusiast', 'Scalable Systems']
   },
   {
     type: 'experience',
-    title: 'Teaching Assistant',
+    title: 'Teaching Assistant (MERN Specialist)',
     organization: 'NxtWave Technologies',
     period: '2023 - Present',
-    description: 'Empowering 500+ students in mastering MERN stack and Python. Conducting code reviews, solving complex architectural doubts, and mentoring student projects.',
-    achievements: ['Student Mentor of the Year', 'Guided 20+ projects']
+    description: 'Mentoring 500+ aspiring developers. I simplify complex backend concepts and guide students through high-impact Full Stack projects.',
+    achievements: ['Student Mentor', 'Code Reviewer']
   },
   {
     type: 'education',
-    title: 'Bachelor of Engineering in ECE',
+    title: 'B.E. in Electronics & Communication',
     organization: 'AMC Engineering College',
     period: '2021 - 2025',
-    description: 'Specializing in Electronics & Communication. Bridging the gap between hardware architecture and high-level software engineering.',
-    achievements: ['Quantum Hacks 2025 Finalist', 'Academic Excellence (8.5+ CGPA)']
+    description: 'Where hardware meets software. My ECE background gives me a deep understanding of how code interacts with the physical world.',
+    achievements: ['Hackathon Finalist', 'CGPA 8.5+']
   },
   {
     type: 'education',
-    title: 'Pre-University Education',
+    title: 'Pre-University (Computer Science)',
     organization: 'EXCELLENT PU College',
     period: '2019 - 2021',
-    description: 'PCMC (Physics, Chemistry, Mathematics, Computer Science).',
-    achievements: ['Distinction in Computer Science']
+    description: 'The beginning of my fascination with logic and problem solving.',
+    achievements: ['CS Distinction']
   }
 ];
 
@@ -149,5 +149,5 @@ export const SOCIALS = {
   github: 'https://github.com/savitateggi',
   leetcode: 'https://leetcode.com/u/Savita_teggi021/',
   instagram: 'https://www.instagram.com/_savii_21/',
-  resume: '#' // Placeholder for resume link
+  resume: '#' 
 };
