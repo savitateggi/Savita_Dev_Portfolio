@@ -21,7 +21,7 @@ export function Hero() {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            A passionate <span className="text-white font-medium underline decoration-primary decoration-2 underline-offset-4">Full Stack Developer</span> and ECE Student at AMC Engineering College, focused on building innovative, efficient, and user-centric digital experiences.
+            A passionate <span className="text-white font-medium underline decoration-primary decoration-2 underline-offset-4">Full Stack & Software Developer</span> and ECE Student at AMC Engineering College, focused on building innovative, efficient, and user-centric digital experiences.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
@@ -31,10 +31,10 @@ export function Hero() {
             </Button>
             
             <div className="flex items-center gap-4">
-              <a href="https://github.com/savitateggi" target="_blank" className="bg-white/5 p-4 rounded-full border border-white/10 hover:bg-white/10 transition-colors">
+              <a href="https://github.com/savitateggi" target="_blank" className="bg-white/5 p-4 rounded-full border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-sm">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://www.linkedin.com/in/savita-teggi-a15a90307" target="_blank" className="bg-white/5 p-4 rounded-full border border-white/10 hover:bg-white/10 transition-colors">
+              <a href="https://www.linkedin.com/in/savita-teggi-a15a90307" target="_blank" className="bg-white/5 p-4 rounded-full border border-white/10 hover:bg-white/10 transition-colors backdrop-blur-sm">
                 <Linkedin className="w-6 h-6" />
               </a>
             </div>
@@ -48,7 +48,7 @@ export function Hero() {
                 </div>
               ))}
             </div>
-            <p>Loved by students and collaborators across <span className="text-accent font-bold">NxtWave</span>.</p>
+            <p>Collaborating with students and developers across <span className="text-accent font-bold">NxtWave</span>.</p>
           </div>
         </div>
 
@@ -71,7 +71,7 @@ export function Hero() {
             </div>
 
             {/* Experience Card Overlay */}
-            <div className="absolute -bottom-4 -right-4 md:bottom-8 md:-right-12 glass-card p-6 rounded-2xl animate-in zoom-in slide-in-from-right-8 duration-1000 delay-300">
+            <div className="absolute -bottom-4 -right-4 md:bottom-8 md:-right-12 glass-card p-6 rounded-2xl animate-in zoom-in slide-in-from-right-8 duration-1000 delay-300 backdrop-blur-xl border-white/20">
               <div className="flex items-center gap-4">
                 <div className="bg-accent p-3 rounded-xl">
                   <MousePointer2 className="w-6 h-6 text-background fill-background" />
