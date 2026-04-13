@@ -78,33 +78,33 @@ export const CERTIFICATIONS = [
     title: "Python Full Stack Development",
     issuer: "KodNest",
     id: "KN-2024-7721",
-    date: "Feb 2024",
+    date: "FEB 2024",
     icon: "Code2",
-    color: "from-blue-500/20 to-emerald-500/20"
+    color: "from-blue-500/10 to-emerald-500/10"
   },
   {
     title: "Postman API Fundamentals Student Expert",
     issuer: "Postman",
     id: "PM-CERT-882",
-    date: "Nov 2023",
+    date: "NOV 2023",
     icon: "ShieldCheck",
-    color: "from-orange-500/20 to-red-500/20"
+    color: "from-orange-500/10 to-red-500/10"
   },
   {
     title: "MERN Stack Specialization",
     issuer: "NxtWave",
     id: "NW-MERN-901",
-    date: "Aug 2023",
+    date: "AUG 2023",
     icon: "Layers",
-    color: "from-purple-500/20 to-blue-500/20"
+    color: "from-purple-500/10 to-blue-500/10"
   },
   {
     title: "LoRaWAN & IoT Foundations",
     issuer: "Semtech Academy",
     id: "IOT-LR-221",
-    date: "Dec 2023",
+    date: "DEC 2023",
     icon: "Cpu",
-    color: "from-emerald-500/20 to-blue-500/20"
+    color: "from-emerald-500/10 to-blue-500/10"
   }
 ];
 
@@ -116,43 +116,35 @@ export const TIMELINE = [
     location: 'Bengaluru, Karnataka',
     period: 'Feb 2024 - Present',
     points: [
-      'Optimized full-stack applications using Python, React, HTML, and CSS, resulting in improved system scalability.',
-      'Increased system efficiency by building RESTful APIs and optimizing MySQL queries, significantly enhancing overall performance.',
-      'Integrated Generative AI features and responsive UI components to improve user experience and platform functionality.'
+      'Architecting scalable full-stack applications leveraging Python and React frameworks.',
+      'Optimizing backend efficiency through RESTful API design and MySQL query tuning.',
+      'Implementing cutting-edge Generative AI features to automate development workflows.'
     ],
-    achievements: ['Gen AI Integration', 'Full Stack Optimization']
+    achievements: ['Gen AI Specialist', 'Backend Optimization']
   },
   {
     type: 'experience',
     title: 'Teaching Assistant',
     organization: 'NxtWave Technologies',
     period: '2023 - Present',
-    description: 'Assisting students in mastering web development technologies (HTML, CSS, JS, Python). Providing technical support, solving coding doubts, and contributing to learning materials.',
-    achievements: ['Solved 500+ student queries', 'Guided 20+ projects']
+    description: 'Empowering 500+ students in mastering MERN stack and Python. Conducting code reviews, solving complex architectural doubts, and mentoring student projects.',
+    achievements: ['Student Mentor of the Year', 'Guided 20+ projects']
   },
   {
     type: 'education',
     title: 'Bachelor of Engineering in ECE',
     organization: 'AMC Engineering College',
     period: '2021 - 2025',
-    description: 'Focused on Electronics and Communication Engineering with special interests in Web Technologies and Hardware Integration.',
-    achievements: ['Quantum Hacks 2025 Participant', 'Maintained 8.5+ CGPA']
+    description: 'Specializing in Electronics & Communication. Bridging the gap between hardware architecture and high-level software engineering.',
+    achievements: ['Quantum Hacks 2025 Finalist', 'Academic Excellence (8.5+ CGPA)']
   },
   {
     type: 'education',
     title: 'Pre-University Education',
     organization: 'EXCELLENT PU College',
     period: '2019 - 2021',
-    description: 'Science stream (PCMC).',
-    achievements: ['Ranked in top 10% of class']
-  },
-  {
-    type: 'education',
-    title: 'Secondary Education',
-    organization: 'St. Joseph English Medium',
-    period: 'Completed 2019',
-    description: 'High school with focus on holistic development.',
-    achievements: ['Distinction holder']
+    description: 'PCMC (Physics, Chemistry, Mathematics, Computer Science).',
+    achievements: ['Distinction in Computer Science']
   }
 ];
 
