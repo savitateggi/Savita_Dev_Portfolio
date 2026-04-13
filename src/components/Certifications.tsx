@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { CERTIFICATIONS, SOCIALS } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Code2, Layers, Award, Github, Linkedin, FileText } from 'lucide-react';
+import { Code2, Layers, Award, Github, Linkedin, Terminal } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
   Code2: <Code2 className="w-6 h-6" />,
@@ -92,10 +92,10 @@ export function Certifications() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 relative z-10">
-            <motion.a whileHover={{ y: -5 }} href={SOCIALS.resume} target="_blank">
+            <motion.a whileHover={{ y: -5 }} href={SOCIALS.leetcode} target="_blank">
               <Button variant="outline" className="glass-button h-14 px-8 rounded-2xl gap-3 text-base font-bold border-primary/20 hover:bg-primary hover:text-white transition-all">
-                <FileText className="w-5 h-5" />
-                View Resume
+                <Terminal className="w-5 h-5" />
+                LeetCode Profile
               </Button>
             </motion.a>
             <motion.a whileHover={{ y: -5 }} href={SOCIALS.github} target="_blank">
