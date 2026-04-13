@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDownRight, Github, Linkedin, MousePointer2 } from 'lucide-react';
+import { ArrowDownRight, Github, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -13,7 +13,7 @@ export function Hero() {
       <motion.div 
         animate={{ 
           scale: [1, 1.1, 1],
-          opacity: [0.3, 0.5, 0.3],
+          opacity: [0.2, 0.4, 0.2],
           x: [0, 50, 0],
           y: [0, -50, 0],
         }}
@@ -24,7 +24,7 @@ export function Hero() {
       <motion.div 
         animate={{ 
           scale: [1, 1.2, 1],
-          opacity: [0.2, 0.4, 0.2],
+          opacity: [0.1, 0.3, 0.1],
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[140px] -z-10" 
@@ -33,7 +33,7 @@ export function Hero() {
       {/* Floating White Light Accents */}
       <motion.div
         animate={{ 
-          opacity: [0.1, 0.2, 0.1],
+          opacity: [0.05, 0.15, 0.05],
           scale: [1, 1.5, 1],
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -48,7 +48,7 @@ export function Hero() {
           rotate: [0, 360]
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[15%] left-[10%] w-40 h-40 bg-gradient-to-br from-primary/20 to-white/5 rounded-full blur-3xl -z-5"
+        className="absolute top-[15%] left-[10%] w-40 h-40 bg-gradient-to-br from-primary/10 to-white/5 rounded-full blur-3xl -z-5"
       />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -120,29 +120,11 @@ export function Hero() {
                 alt="Savita Teggi"
                 fill
                 priority
-                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
                 data-ai-hint="professional woman developer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-80" />
             </div>
-
-            {/* Experience Card Overlay */}
-            <motion.div 
-              initial={{ x: 30, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="absolute -bottom-6 -right-6 md:bottom-12 md:-right-12 glass-panel p-6 rounded-3xl z-20"
-            >
-              <div className="flex items-center gap-4">
-                <div className="bg-primary/20 p-4 rounded-2xl border border-primary/30">
-                  <MousePointer2 className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="text-4xl font-black text-white leading-none">2+</p>
-                  <p className="text-[10px] uppercase font-bold tracking-widest text-primary">Years Excellence</p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
       </div>
